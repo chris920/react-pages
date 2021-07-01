@@ -1,0 +1,49 @@
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #dee2e6 !default;
+$gray-300: #bdbdbd !default;
+$gray-400: #999999 !default;
+$gray-500: #afb4b9 !default;
+$gray-600: #818991 !default;
+$gray-700: #495057 !default;
+$gray-800: #495057 !default;
+$gray-900: #495057 !default;
+$black:    #000 !default;
+
+$blue:    #548fe7 !default;
+$indigo:  #6610f2 !default;
+$purple:  #8d60e2 !default;
+$pink:    #d63384 !default;
+$red:     #b9313f !default;
+$orange:  #fd7e14 !default;
+$yellow:  #fac935 !default;
+$green:   #198754 !default;
+$teal:    #3accc5 !default;
+$cyan:    #50d4ee !default;
+
+$primary:       $yellow !default;
+$secondary:     $gray-600 !default;
+$success:       $teal !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+
+$body-color: $gray-500 !default;
+
+$component-active-color: $gray-900 !default;
+$component-active-bg: $gray-100 !default;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&Dancing+Script:wght@400;700&family=Fredericka+the+Great&family=Raleway&family=Roboto&display=swap');
+
+$enable-rounded: true;
+$enable-caret: false;
+$enable-shadows: true;
+$enable-gradients: true;
+$font-family: Oswald;
+$font-family-sans-serif: Raleway, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, !default;
+$font-family-base: $font-family-sans-serif !default;
+
+@import '~bootstrap/scss/bootstrap.scss';
