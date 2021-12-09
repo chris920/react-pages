@@ -21,7 +21,7 @@ $green:   #198754 !default;
 $teal:    #3accc5 !default;
 $cyan:    #50d4ee !default;
 
-$primary:       $yellow !default;
+$primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $teal !default;
 $info:          $cyan !default;
@@ -47,3 +47,238 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, !default;
 $font-family-base: $font-family-sans-serif !default;
 
 @import '~bootstrap/scss/bootstrap.scss';
+
+
+.prof {
+    z-index: 10000;
+    // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    position: relative;
+    margin-top: -40px;
+}
+
+body {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='46.5' height='46.5' patternTransform='scale(2) rotate(5)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M27.31-2.917a5 5 0 010 5.834m-8.12 0a5 5 0 010-5.834m-4.827 7.501a10 10 0 010-9.169m17.774.001a10 10 0 010 9.169M10.181 7.36a15 15 0 01-.001-14.722m26.14 0a15 15 0 010 14.724m-9.01 36.22a5 5 0 010 5.835m-8.12 0a5 5 0 010-5.834m-4.827 7.501a10 10 0 010-9.169m17.774.001a10 10 0 010 9.169M10.181 53.86a15 15 0 01-.001-14.723m26.14 0a15 15 0 010 14.724m6.12-27.693a5 5 0 010-5.834m-4.827 7.5a10 10 0 010-9.169M33.431 30.61a15 15 0 01-.001-14.722M4.06 20.332a5 5 0 010 5.835m4.827-7.501a10 10 0 010 9.169m4.183-11.947a15 15 0 010 14.724'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(259, 0%, 94%, 1)' fill='none'/><path d='M43.582 42.44a5 5 0 015.835 0m-7.501-4.827a10 10 0 019.169 0M39.138 33.43a15 15 0 0114.724 0m-56.781 9.01a5 5 0 015.836 0m-7.501-4.827a10 10 0 019.169 0M-7.362 33.43a15 15 0 0114.724 0M49.417 4.06a5 5 0 01-5.834 0m7.501 4.827a10 10 0 01-9.169 0m11.946 4.182a15 15 0 01-14.723.001M2.917 4.06a5 5 0 01-5.834 0m7.501 4.827a10 10 0 01-9.169 0M7.36 13.069a15 15 0 01-14.722.001m27.694 6.12a5 5 0 015.835 0m0 8.12a5 5 0 01-5.834 0m7.5 4.827a10 10 0 01-9.168 0m.001-17.774a10 10 0 019.169 0m2.776 21.956a15 15 0 01-14.723.001m0-26.14a15 15 0 0114.724 0'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(340, 0%, 95%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    font-family: "Comfortaa", sans-serif;
+}
+  
+.main-content {
+    max-width: 700px;
+    margin: 4em auto 0;
+    text-align: center;
+}
+  
+h1 {
+    margin: 2em 0;
+    color: #fff;
+}
+
+svg {
+    display: inline-block;
+}
+
+path, polygon, circle, rect {
+    transition: fill 1s ease;
+}
+
+#controls {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+  
+.illustration {
+    position: relative;
+    align-self: end;
+    margin: auto;
+    width: 250px;
+    overflow: hidden;
+}
+
+.mountain, .hill, .land, .trees, .sun, .clouds, .moon, .stars {
+    position: absolute;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
+
+.mountain {
+    bottom: 45px;
+}
+
+.hill {
+    bottom: 45px;
+}
+
+.trees {
+    bottom: 25px;
+}
+
+.sun {
+    top: 120px;
+    margin-left: -20px;
+    transition: all 1s ease;
+    transform: scale(0.2);
+}
+
+.moon, .stars {
+    top: 25px;
+    opacity: 0;
+}
+
+.land {
+    bottom: 3px;
+}
+
+.clouds {
+    top: 50px;
+    right: -500px;
+    transition: all 1s ease .1s;
+}
+
+.day {
+    .sun {
+        top: 10px;
+        margin-left: 0;
+        transform: scale(1);
+    }
+    .clouds {
+        right: 0;
+    }
+}
+
+.night {
+    .stars, .moon {
+        opacity: 1;
+        transition: all 1s ease .5s;
+    }
+    #sky {
+        fill: #17377f;
+    }
+    #mountain {
+        fill: #73addf;
+    }
+    #hill {
+        fill: #659fcd;
+    }
+    #land {
+        fill: #508bb5;
+    }
+    .trees {
+        fill: #1c2c3b;
+    }
+    .trunks {
+        fill: #3f3e3d;
+    }
+}
+
+.sunset {
+    .sun {
+        top: 60px;
+        margin-left: -80px;
+        transform: scale(1);
+    }
+    #sun {
+        fill: #fff;
+    }
+    #sky {
+        fill: url(#sky_sunset);
+    }
+    #mountain {
+        fill: #efbb2b;
+    }
+    #hill {
+        fill: #e6ad28;
+    }
+    #land {
+        fill: #de9f26;
+    }
+    .trees {
+        fill: #747c0b;
+    }
+    .trunks {
+        fill: #3f3e3d;
+    }
+}
+
+.dusk {
+    .sun {
+        top: 60px;
+        margin-left: 140px;
+        transform: scale(1);
+    }
+    #sun {
+        fill: #ffffda;
+    }
+    #sky {
+        fill: url(#sky_dusk);
+    }
+    #mountain {
+        fill: #f1a3a2;
+    }
+    #hill {
+        fill: #e09c9c;
+    }
+    #land {
+        fill: #c4918d;
+    }
+    .trees {
+        fill: #ce791c;
+    }
+    .trunks {
+        fill: #8c5f50;
+    }
+}
+
+.option-wrapper {
+    display: flex;
+    margin: 3em auto;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 300px;
+    font-size: 12px;
+    line-height: 1.2;
+    .option {
+        transition: all 200ms ease;
+        padding: 10px 10px 8px;
+        width: 50%;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+        &.active {
+            background: #fff;
+            color: #333;
+            pointer-events: none;
+        }
+    }
+}
+
+#tabs{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.page-btn{
+	transition: transform .6s ease-out, border .6s ease-out, background-color .8s ease-in-out, color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .5s ease-in-out !important;
+
+	border:inherit;
+	
+	margin-bottom: 1rem;
+    display: block !important;
+    width: 100% !important;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    text-align: center;
+    vertical-align: middle;
+	line-height: 1.5;
+    -webkit-user-select: none;
+    user-select: none;
+	text-decoration: none !important;
+}
+
+.page-btn:hover {
+	text-decoration: none !important;
+}
